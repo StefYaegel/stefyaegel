@@ -1,0 +1,88 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Stef Yaegel</title>
+    <meta name="Stef Yaegel" content="Author" />
+    <meta name="description" content="Website description" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="pixelstef.png">
+  </head>
+  <body>
+    <header>
+      <h1 class="clickable">Stef Yaegel</h1>
+    </header>
+
+    <div id="cursor">
+        <img id="cursorimg" src="mycontrollergrey.png" alt="" />
+     </div>
+
+     <button onClick="activateMenu()"> 
+      <img id="menubutton" class="clickable" src="menuicon.png" alt="Description" />
+    </button>
+    <nav>
+      <a class="typing clickable" href="index.html" style="animation-delay: 0s;">main ( )</a>
+      <span style="display:flex; margin-top: 10px;"></span> 
+      <a class="typing clickable" href="main.html" style="animation-delay: 2.5s;">about ( )</a>
+      <span style="display:flex; margin-top: 10px;"></span> 
+      <a class="typing clickable" href="projects.html" style="animation-delay: 5.0s;">projects ( )</a>
+      <span style="display:flex; padding-bottom: 275px;"></span> 
+  </nav>
+
+
+    <footer>
+    </footer>
+
+    <script>
+      
+      function move(event){
+
+        cursor.style.left = event.x + "px";
+        cursor.style.top = event.y + "px";
+
+        const elementUnderCursor = document.elementFromPoint(event.x, event.y);
+
+        if (elementUnderCursor && elementUnderCursor.classList.contains("clickable")) {
+          document.getElementById("cursorimg").src= "mycontrollergrey.png";
+        } else {
+          document.getElementById("cursorimg").src= "mycontroller.png";
+        }
+      }
+
+      window.onmousemove = move;
+
+      function activateMenu() {
+
+        document.body.classList.toggle('om')
+
+        var image = document.getElementById("menubutton");
+
+        if (document.body.classList.contains('om')) {
+          image.src = "whitemenu.png"
+        } else {
+          image.src = "menuicon.png"
+        }
+
+      }
+
+
+      document.querySelectorAll('.typing').forEach((element) => {
+        element.addEventListener('animationend', (event) => {
+          if (event.animationName === 'typing') {
+            element.classList.add('finished');
+          }
+      });
+    });
+
+
+    function resetTyping() {
+      document.querySelectorAll('.typing').forEach((element) => {
+        element.classList.remove('finished'); 
+      });
+    }
+
+    </script>
+  </body>
+</html>

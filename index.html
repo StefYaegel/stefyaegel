@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Stef Yaegel</title>
+    <meta name="Stef Yaegel" content="Author" />
+    <meta name="description" content="Website description" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="pixelsteficon.png">
+  </head>
+  <body>
+
+    <header>
+        <h1 class="clickable" onClick = "openIndexPage()">Stef Yaegel</h1>
+    </header>
+
+    <div id="warningmessage">
+      <img id="warningimage" src="blackscreen.png" alt="Increase your screen size for better performance." />
+      <img id="warninggif" src="screensize.gif" alt="Increase your screen size for better performance." />
+      <img id="warningstef" src="underconstruction.png" alt="Increase your screen size for better performance." />
+    </div>
+
+    <main>
+
+      <div id="cursor">
+        <img id="cursorimg" src="mycontroller.png" alt="" />
+     </div>
+
+      <div class="titles_slideshow">
+        <h2>Creative Coder</h2>
+        <h2>Unity Developer</h2>
+        <h2>XR & Games</h2>
+      </div>
+
+      <div id="pixel_stef_container"> 
+        <img id="helloworld" src="helloworldintro.gif" class="clickable" onClick = "openMainPage()" alt="Description" />
+        <img id="pixelstef" src="pixelstef.png" class="clickable" onClick = "openMainPage()"  alt="Description" />
+      </div>
+
+    </main>
+    <div id="skateboard_container"> 
+      <img id="skateboard" src="skateboard.png" alt="Description" />
+    </div>
+    <div id="game_floor">
+    </div>
+
+    <footer>
+    </footer>
+
+    <script>
+            
+      function openIndexPage() {
+        window.location.href = 'index.html';
+      }
+      
+      function openMainPage() {
+        window.location.href = 'main.html';
+      }
+
+      function move(event){
+
+        cursor.style.left = event.x + "px";
+        cursor.style.top = event.y + "px";
+
+        const elementUnderCursor = document.elementFromPoint(event.x, event.y);
+
+        if (elementUnderCursor && elementUnderCursor.classList.contains("clickable")) {
+          document.getElementById("cursorimg").src= "mycontrollergrey.png";
+        } else {
+          document.getElementById("cursorimg").src= "mycontroller.png";
+        }
+      }
+
+      window.onmousemove = move;
+
+      document.querySelectorAll('.typing').forEach((element) => {
+        element.addEventListener('animationend', (event) => {
+          if (event.animationName === 'typing') {
+            element.classList.add('finished');
+          }
+      });
+    });
+
+
+    function resetTyping() {
+      document.querySelectorAll('.typing').forEach((element) => {
+        element.classList.remove('finished'); 
+      });
+    }
+
+    </script>
+
+  </body>
+</html>

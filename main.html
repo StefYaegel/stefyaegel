@@ -1,0 +1,459 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Stef Yaegel</title>
+    <meta name="Stef Yaegel" content="Author" />
+    <meta name="description" content="Website description" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="pixelsteficon.png">
+  </head>
+  <body id="game_body">
+    <header>
+      <h1 id="title" class="clickable" onClick = "openIndexPage()">Stef Yaegel</h1>
+    </header>
+
+    <div id="warningmessage">
+      <img id="warningimage" src="blackscreen.png" alt="Increase your screen size for better performance." />
+      <img id="warninggif" src="screensize.gif" alt="Increase your screen size for better performance." />
+      <img id="warningstef" src="underconstruction.png" alt="Increase your screen size for better performance." />
+    </div>
+
+    <main>
+
+
+      <div id="tradingcardwidget"> 
+        <img id="tradingcard" src="emptycardnew.png" alt="" />
+        <img id="tradingcardhover" src="playtocollect.png" alt="" />
+      </div>
+
+    <div id="instructions_container">
+      <img id="instructions" src="newestinstructions.gif" alt="" />
+    </div>
+
+    <div id="cursor">
+        <img id="cursorimg" src="mycontrollergrey.png" alt="" />
+     </div>
+
+    <div class="main_game">  
+        <img id="ingame_skateboard" class = "clickable" onClick = "swapPlayer()" src="skateboard.png" alt="Description" />
+    
+        <div class="scrollable_content"> 
+            <div class="words_container">    
+
+                <!-- Section 0 - About Me -->
+                <div class="words_LP" style="left: 795px;">ABOUT ME</div>
+                <div class="words_LP" id="startarrow" style="left: 1345px;">&gt</div>
+
+                <!-- Section 1 - Billboard -->
+                <img src="pixellamp.png" id= "lamppost" style="left: 100px;" alt="Description"/>
+                <img src="education.png" id= "billboard" style="left: 2100px;" alt="Description"/>
+                <div class="words_LP" id="startarrow" style="left: 2800px;">&gt</div>
+                <div class="words_LP" id="startarrow" style="left: 2750px;">&gt</div>
+                <div class="words_LP" id="startarrow" style="left: 2700px;">&gt</div>
+                <img src="pixellamp.png" id= "lamppost" style="left: 2800px;" alt="Description"/>
+
+
+                <!-- Section 1 - Education -->
+                <div class="words_LP" style="left: 3300px;">THE UNIVERSITY OF MIAMI</div>
+                <div class="words_LP" style="left: 5300px; font-size: 130px,;">COMPUTER SCIENCE</div>
+                <div class="words_LP" style="left: 7100px; font-size: 100px; bottom: 7.2%">MATH & INTERACTIVE MEDIA</div>
+                <img id="umiamicard" class="gamecard" style="left: 8800px;" src="umiami.png" alt="" />
+
+                <!-- Section 2 - Billboard -->
+                <img src="languages.png" id= "billboard" style="left: 9400px;" alt="Description"/>
+                <img src="pixellamp.png" id= "lamppost" style="left: 10100px;" alt="Description"/>
+                <div class="words_P" id="startarrow" style="left: 10100px;">&gt</div>
+                <div class="words_P" id="startarrow" style="left: 10050px;">&gt</div>
+                <div class="words_P" id="startarrow" style="left: 10000px;">&gt</div>
+
+                <!-- Section 2 - Languages -->
+                <!-- Should you use pixel icons instead of words? -->
+                <div class="words_P" style="left: 10600px;">C#</div>
+                <div class="words_P" style="left: 11100px;">Java</div>
+                <div class="words_P" style="left: 11700px;">C</div>
+                <div class="words_P" style="left: 12100px;">Swift</div>
+                <div class="words_P" style="left: 12800px;">HTML/CSS</div>
+                <img id="computercard" class="gamecard" style="left: 13800px;" src="tech.png" alt="" />
+
+                <!-- Section 3 - Billboard -->
+                <img src="experience.png" id= "billboard" style="left: 14500px;" alt="Description"/>
+                <div class="words_DP" id="startarrow" style="left: 15200px;">&gt</div>
+                <div class="words_DP" id="startarrow" style="left: 15150px;">&gt</div>
+                <div class="words_DP" id="startarrow" style="left: 15100px;">&gt</div>
+                <img src="pixellamp.png" id= "lamppost" style="left: 15200px;" alt="Description"/>
+                
+                <!-- Section 3 - Experience -->
+                <div class="words_DP" style="left: 15800px; font-size: 110px; bottom: 6.9%;">AR/VR DEVELOPER @ VESL</div>
+                <div class="words_DP" style="left: 17700px; font-size: 110px; bottom: 6.9%;">APP INSTRUCTOR @ KWK</div>
+                <div class="words_DP" style="left: 19500px; font-size: 110px; bottom: 6.9%;">WEB MARKETING @ STIFEL</div>
+                <img id="gamecard" class="gamecard" style="left: 21250px;" src="game.png" alt="" />
+                
+                <!-- Section 4 - Billboard -->
+                <img src="projects.png" id= "billboard" style="left: 21800px;" alt="Description"/>
+                <div class="words_SDP" id="startarrow" style="left: 22500px;">&gt</div>
+                <div class="words_SDP" id="startarrow" style="left: 22450px;">&gt</div>
+                <div class="words_SDP" id="startarrow" style="left: 22400px;">&gt</div>
+                <img src="pixellamp.png" id= "lamppost" style="left: 22450px;" alt="Description"/>
+                
+                <!-- Section 4 - Projects -->
+                <div class="words_SDP" style="left: 23000px;">305-360&deg;</div>  
+                <img src="billboardscreen.png" id= "billboardscreen" style="left: 23700px;" alt="Description"/>
+                  <video width="365" height="241" id="screen" style="left: 23837px; bottom: 15vw;" autoplay muted controls>
+                  <source src="Demo305Trim.mp4" type="video/mp4" />
+                </video>
+                <div class="words_SDP" style="left: 24650px;">Temikki Garden</div>
+                <img src="billboardscreen.png" id= "billboardscreen" style="left: 25750px;" alt="Description"/>
+                <video width="364" height="240" id="screen" style="left: 25887px; bottom: 15vw;;" autoplay muted controls>
+                  <source src="temdemo.mov" type="video/mp4" />
+                </video>
+
+                <div class="words_SDP" style="left: 26687px;">Jelly Jump</div>
+                <img src="billboardscreen.png" id= "billboardscreen" style="left: 27387px;" alt="Description"/>
+                <a href="https://stefyaegel.github.io/JellyJumpGame/" target="_blank" class="words_SDP clickable" style="left: 27520px; font-size: 35px; bottom: 9%">//click here to play//</a>
+                <video width="364" height="240" id="screen" style="left: 27523px; bottom: 15vw;" autoplay muted controls>
+                  <source src="JellyDemo.mp4" type="video/mp4" />
+                </video>   
+
+                <img id="phonecard" class="gamecard" style="left: 28450px;" src="iphone.png" alt="" />
+
+                  <!-- Section 5 - Billboard -->
+                <img src="tools.png" id= "billboard" style="left: 29000px;" alt="Description"/>
+                <div class="words_SDP" id="startarrow" style="left: 29700px;">&gt</div>
+                <div class="words_SDP" id="startarrow" style="left: 29650px;">&gt</div>
+                <div class="words_SDP" id="startarrow" style="left: 29600px;">&gt</div>
+                <img src="pixellamp.png" id= "lamppost" style="left: 29700px;" alt="Description"/>
+                
+                <!-- Section 5 - Dev & Design Tools -->
+                <img src="devtools.png" id= "languages" style="left: 30300px;" alt="Description"/>
+                <img src="versioncontrol.png" id= "languages" style="left: 30700px;" alt="Description"/>
+                <img src="projmanagement.png" id= "languages" style="left: 31100px;" alt="Description"/>
+                <img id="toolscard" class="gamecard" style="left: 31700px;" src="toolscard.png" alt="" />
+                <div class="words_SDP" style="left: 32200px;">CONNECT</div>
+                <div class="words_SDP" id="startarrow" style="left: 32700px;">&gt</div>
+                <img src="pixellamp.png" id= "lamppost" style="left: 33150px;" alt="Description"/>
+
+            </div>  
+        </div>
+
+        <div id="swapplayer"> 
+          <img id="chooseplayerimg" class = "clickable" onClick = "swapPlayer()" src="playerskateboard.png" alt="" />
+        </div>
+
+        <div id="player">
+            <img id="playerimg" onClick = "onSkateboardClick()" src="flippedstef.png" alt="" />
+        </div>
+    </div>
+
+    <main>
+        <div id="ingame_floor">
+          <h1 id="emailaddress">steffiyaegel@yahoo.com</h1>
+          <div id="email" class="clickable"></div>
+          <a id="github" class="clickable" href="https://github.com/StefYaegel" target="_blank">
+          <a id="linkedin" class="clickable" href="http://www.linkedin.com/in/stefanieyaegel" target="_blank">
+
+    <footer>
+    </footer>
+
+    
+
+    <script>
+
+      // if skateboard on, add player.classList.add('clickable'); otherwise player.classList.remove('clickable');
+
+            
+      function openIndexPage() {
+        window.location.href = 'index.html';
+      }
+
+      function swapPlayer() {
+
+        var buttonimage = document.getElementById("chooseplayerimg");
+        var player = document.getElementById("playerimg");
+        var playerParent = document.getElementById("player");
+        var instructions = document.getElementById("instructions");
+        var skateboard = document.getElementById("ingame_skateboard");
+
+        if (buttonimage.src.includes("playerwalking")){
+          buttonimage.src = "playerskateboard.png";
+          player.src = "flippedstef.png"
+          playerParent.style.bottom = "11%"; 
+          instructions.style.bottom = "26%";
+          skateboard.style.display = "block";
+        } else if (buttonimage.src.includes("playerskateboard.png")){
+          buttonimage.src = "playerwalking.png";
+          player.src = "skateboardstef.png"
+          playerParent.style.bottom = "15%"; 
+          instructions.style.bottom = "30%";
+          skateboard.style.display = "none";
+        }
+
+      }
+
+
+      function onSkateboardClick() {
+
+        var buttonimage = document.getElementById("chooseplayerimg");
+        var player = document.getElementById("playerimg");
+        var playerParent = document.getElementById("player");
+        var instructions = document.getElementById("instructions");
+        var skateboard = document.getElementById("ingame_skateboard");
+
+        if (buttonimage.src.includes("playerwalking")){
+          buttonimage.src = "playerskateboard.png";
+          player.src = "flippedstef.png"
+          playerParent.style.bottom = "11%"; 
+          instructions.style.bottom = "26%";
+          skateboard.style.display = "block";
+        }
+
+      }
+      
+      let cardCount = 0;
+      function updateTradingCards(){
+
+        var widget = document.getElementById("tradingcard");
+        var cardsSrc = ['umcollected.png', 'langcollected.png', 'expcollected.png', 'projectscollected.png', 'toolscollected.png'];
+
+        if (cardCount >= cardsSrc.length) {
+            return;
+        }
+
+        widget.src = cardsSrc[cardCount];
+        cardCount ++;
+      }
+
+      function move(event){
+
+        cursor.style.left = event.x + "px";
+        cursor.style.top = event.y + "px";
+
+        const elementUnderCursor = document.elementFromPoint(event.x, event.y);
+
+        if (elementUnderCursor && elementUnderCursor.classList.contains("clickable")) {
+          document.getElementById("cursorimg").src= "mycontrollergrey.png";
+        } else {
+          document.getElementById("cursorimg").src= "mycontroller.png";
+        }
+
+      }
+
+      window.onmousemove = move;
+
+
+    document.addEventListener('keydown', function (event) {
+
+            let currentPos = window.scrollX;
+            var player = document.getElementById('playerimg');
+            var instructions = document.getElementById('instructions');
+            var playerParent = document.getElementById("player");
+            var walkingDistance = 30;
+            var skatingDistance = 75;
+            var distance = walkingDistance;
+
+            if (player.src.includes("skateboardstef.png")){
+              distance = skatingDistance;
+            } else {
+              distance = walkingDistance;
+            }
+
+            if (event.key === 'ArrowRight') {
+                window.scrollTo({left: currentPos + distance});
+                player.style.transform = "scaleX(1)";
+            }
+
+            if (event.key === 'ArrowLeft') {
+                window.scrollTo({left: currentPos - distance});
+                player.style.transform = "scaleX(-1)";
+            }
+    });
+
+    // ranges for each speech bubble
+    const speechBubbles = [
+    { min: 0, max: 800, src: "newestinstructions.gif" },
+    { min: 801, max: 2550, src: "noimage" },
+    { min: 2551, max: 4000, src: "um.gif" },
+    { min: 4001, max: 4600, src: "noimage" },
+    { min: 4601, max: 5700, src: "cs.gif" },
+    { min: 5701, max: 6500, src: "noimage" },
+    { min: 6501, max: 7700, src: "mathim.gif" },
+    { min: 7701, max: 9850, src: "noimage" },
+    { min: 9851, max: 10100, src: "csharp.gif" },
+    { min: 10101, max: 10400, src: "noimage" },
+    { min: 10401, max: 10650, src: "java.gif" },
+    { min: 10651, max: 10950, src: "noimage" },
+    { min: 10951, max: 11100, src: "c.gif" },
+    { min: 11101, max: 11370, src: "noimage" },
+    { min: 11371, max: 11725, src: "swift.gif" },
+    { min: 11726, max: 12085, src: "noimage" },
+    { min: 12086, max: 12690, src: "htmlcss.gif" },
+    { min: 12691, max: 15000, src: "noimage" },
+    { min: 15001, max: 15700, src: "vesl1.gif" },
+    { min: 15701, max: 16400, src: "vesl2.gif" },
+    { min: 16401, max: 17000, src: "noimage" },
+    { min: 17001, max: 18200, src: "kwk.gif" },
+    { min: 18201, max: 18800, src: "noimage" },
+    { min: 18801, max: 20150, src: "stifel.gif" },
+    { min: 20151, max: 22250, src: "noimage" },
+    { min: 22251, max: 22850, src: "305360.gif" },    
+    { min: 22851, max: 23900, src: "noimage" },
+    { min: 23901, max: 24850, src: "temikki.gif" },
+    { min: 24851, max: 25900, src: "noimage" },
+    { min: 25901, max: 26600, src: "jelly.gif" },
+    { min: 26601, max: 31550, src: "noimage" },
+    { min: 31551, max: 33000, src: "thanksforvisiting.gif" },
+    ];
+
+    const instructions = document.getElementById("instructions");
+
+    let currentSrc = "newestinstructions.gif";
+
+    // if within pixel range, set corresponding speech bubble
+    function swapBubble(currentPos) {
+        const bubble = speechBubbles.find(b => currentPos >= b.min && currentPos <= b.max);
+
+        if (bubble && currentSrc !== bubble.src) {
+            instructions.src = bubble.src;
+            currentSrc = bubble.src; 
+            instructions.style.display = "inline";  
+        }
+
+        if (bubble.src == "noimage"){
+          instructions.style.display = "none";
+        }
+    }
+
+    window.addEventListener("scroll", () => {
+        const currentPos = window.scrollX; 
+        swapBubble(currentPos);
+    });
+
+
+    window.onload = function() {
+        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+        window.location.href = 'main.html';
+    } };
+
+
+    // for game cards
+    document.addEventListener("DOMContentLoaded", function () {
+    const gameCards = document.querySelectorAll('.gamecard'); 
+
+    function checkCardPosition() {
+        gameCards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            const triggerPoint = window.innerWidth / 2;
+
+            if (!card.hasAttribute('collected') && rect.right < triggerPoint) {
+                card.style.display = 'none'; 
+                card.setAttribute('collected', 'true'); 
+                updateTradingCards();
+            }
+        });
+    }
+
+    // Run the check on scroll or animation loop
+    window.addEventListener('scroll', checkCardPosition);
+    });
+
+    // for light purple words 
+    document.addEventListener("DOMContentLoaded", function () {
+    var words = document.querySelectorAll('.words_LP');
+
+    function checkWordPosition() {
+        words.forEach(word => {
+            const rect = word.getBoundingClientRect();
+            const triggerPoint = 700;
+
+            if (rect.right < triggerPoint) {
+                word.style.color = 'rgb(158, 102, 249)'; 
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkWordPosition);
+    });
+
+    // for purple words
+
+    document.addEventListener("DOMContentLoaded", function () {
+    var words = document.querySelectorAll('.words_P');
+
+    function checkWordPositionP() {
+        words.forEach(word => {
+            const rect = word.getBoundingClientRect();
+            const triggerPoint = 700;
+
+            if (rect.right < triggerPoint) {
+                word.style.color = 'rgb(135, 63, 252)'; 
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkWordPositionP);
+    });
+
+  // for dark purple words
+    document.addEventListener("DOMContentLoaded", function () {
+    var words = document.querySelectorAll('.words_DP');
+
+    function checkWordPositionDP() {
+        words.forEach(word => {
+            const rect = word.getBoundingClientRect();
+            const triggerPoint = 700;
+
+            if (rect.right < triggerPoint) {
+                word.style.color = 'rgb(107, 19, 249)'; 
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkWordPositionDP);
+    });
+
+
+    // for super dark purple words
+    document.addEventListener("DOMContentLoaded", function () {
+    var words = document.querySelectorAll('.words_SDP');
+
+    function checkWordPositionSDP() {
+        words.forEach(word => {
+            const rect = word.getBoundingClientRect();
+            const triggerPoint = 700;
+
+            if (rect.right < triggerPoint) {
+                word.style.color = 'rgb(73, 0, 191)'; 
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkWordPositionSDP);
+    });
+
+    document.querySelectorAll('.typing').forEach((element) => {
+        element.addEventListener('animationend', (event) => {
+          if (event.animationName === 'typing') {
+            element.classList.add('finished');
+          }
+      });
+    });
+
+
+    function resetTyping() {
+      document.querySelectorAll('.typing').forEach((element) => {
+        element.classList.remove('finished'); 
+      });
+    }
+
+    const emailImage = document.getElementById('email');
+    const emailAddress = document.getElementById('emailaddress');
+
+    emailImage.addEventListener('click', () => {
+        emailAddress.classList.toggle('visible');
+    });
+
+    </script>
+  </body>
+</html>
