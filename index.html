@@ -19,9 +19,16 @@
     </header>
 
     <div id="warningmessage">
-      <img id="warningimage" src="blackscreen.png" alt="Increase your screen size for better performance." />
-      <img id="warninggif" src="screensize.gif" alt="Increase your screen size for better performance." />
-      <img id="warningstef" src="underconstruction.png" alt="Increase your screen size for better performance." />
+      <div id="blackbackground"></div>
+      <div id="links">
+        <a href="StefanieYaegelCV.pdf" id="typing" class="typing" style="animation-delay: 0s;" download="StefanieYaegelCV.pdf" target="_blank">Resume</a>
+        <a href="http://www.linkedin.com/in/stefanieyaegel" id="typing" class="typing" style="animation-delay: 2.5s;" target="_blank">LinkedIn</a>
+        <a href="mailto:steffiyaegel@yahoo.com" id="typing" class="typing" style="animation-delay: 5.0s;">Email</a>
+      </div>
+      <div id="mobile_version_container"> 
+        <img id="mobileversion" src="mobileversion.gif" alt="Mobile version is not yet available, but click the links above to explore." />
+        <img id="pixelstefmv" src="pixelstef.png" alt="Pixel avatar of the website author." />
+      </div>
     </div>
 
     <main>
@@ -69,9 +76,9 @@
         const elementUnderCursor = document.elementFromPoint(event.x, event.y);
 
         if (elementUnderCursor && elementUnderCursor.classList.contains("clickable")) {
-          document.getElementById("cursorimg").src= "mycontrollergrey.png";
-        } else {
           document.getElementById("cursorimg").src= "mycontroller.png";
+        } else {
+          document.getElementById("cursorimg").src= "mycontrollergrey.png";
         }
       }
 
@@ -85,11 +92,24 @@
       });
     });
 
-
     function resetTyping() {
       document.querySelectorAll('.typing').forEach((element) => {
         element.classList.remove('finished'); 
+        element.style.width = '0%';
+
       });
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 900px)');
+
+    mediaQuery.addListener((event) => {
+      if (event.matches) {
+        resetTyping();
+      }
+    });
+
+    if (mediaQuery.matches) {
+      resetTyping();
     }
 
     </script>
