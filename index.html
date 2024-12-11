@@ -75,9 +75,9 @@
         const elementUnderCursor = document.elementFromPoint(event.x, event.y);
 
         if (elementUnderCursor && elementUnderCursor.classList.contains("clickable")) {
-          document.getElementById("cursorimg").src= "mycontroller.png";
-        } else {
           document.getElementById("cursorimg").src= "mycontrollergrey.png";
+        } else {
+          document.getElementById("cursorimg").src= "mycontroller.png";
         }
       }
 
@@ -100,35 +100,39 @@
     }
 
     function checkVisibleArea() {
-  const viewportWidth = window.innerWidth;  
-  const scrollLeft = window.scrollX || document.documentElement.scrollLeft; 
+    const viewportWidth = window.innerWidth;  
+    const scrollLeft = window.scrollX || document.documentElement.scrollLeft; 
 
-  const visibleWidth = viewportWidth;
+    const visibleWidth = viewportWidth;
 
-  if (visibleWidth < 900) {
-    console.log("The visible area is too small.");
-    showWarning();
-  } else {
-    console.log("Visible area is large enough.");
-    hideWarning();
-    resetTyping();
-  }
-}
-
-  function showWarning() {
-    const warning = document.getElementById('warningmessage');
-    warning.style.display = 'flex';
+    if (visibleWidth < 900) {
+      console.log("The visible area is too small.");
+      showWarning();
+    } else {
+      console.log("Visible area is large enough.");
+      hideWarning();
+      resetTyping();
+    }
   }
 
-  function hideWarning() {
-    const warning = document.getElementById('warningmessage');
-    warning.style.display = 'none';
-  }
+    function showWarning() {
+      const warning = document.getElementById('warningmessage');
+      const cursor = document.getElementById('cursorimg');
+      cursor.style.display = 'none';
+      warning.style.display = 'flex';
+    }
 
-  window.addEventListener('scroll', checkVisibleArea);
-  window.addEventListener('resize', checkVisibleArea);
+    function hideWarning() {
+      const warning = document.getElementById('warningmessage');
+      const cursor = document.getElementById('cursorimg');
+      cursor.style.display = 'flex';
+      warning.style.display = 'none';
+    }
 
-  checkVisibleArea();
+    window.addEventListener('scroll', checkVisibleArea);
+    window.addEventListener('resize', checkVisibleArea);
+
+    checkVisibleArea();
 
     </script>
 
