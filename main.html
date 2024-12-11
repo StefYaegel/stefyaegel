@@ -16,13 +16,20 @@
     </header>
 
     <div id="warningmessage">
-      <img id="warningimage" src="blackscreen.png" alt="Increase your screen size for better performance." />
-      <img id="warninggif" src="screensize.gif" alt="Increase your screen size for better performance." />
-      <img id="warningstef" src="underconstruction.png" alt="Increase your screen size for better performance." />
+      <div id="blackbackground"></div>
+      <div id="links">
+        <a href="StefanieYaegelCV.pdf" id="typing" class="typing" style="animation-delay: 0s;" download="StefanieYaegelCV.pdf" target="_blank">Resume</a>
+        <a href="http://www.linkedin.com/in/stefanieyaegel" id="typing" class="typing" style="animation-delay: 2.5s;" target="_blank">LinkedIn</a>
+        <a href="mailto:steffiyaegel@yahoo.com" id="typing" class="typing" style="animation-delay: 5.0s;">Email</a>
+      </div>
+      <div id="mobile_version_container"> 
+        <img id="mobileversion" src="mobileversion.gif" alt="Mobile version is not yet available, but click the links above to explore." />
+        <img id="pixelstefmv" src="pixelstef.png" alt="Pixel avatar of the website author." />
+      </div>
     </div>
 
-    <main>
 
+    <main>
 
       <div id="tradingcardwidget"> 
         <img id="tradingcard" src="emptycardnew.png" alt="Pixel trading card container with five slots for cards." />
@@ -54,7 +61,6 @@
                 <div class="words_LP" id="startarrow" style="left: 2750px;">&gt</div>
                 <div class="words_LP" id="startarrow" style="left: 2700px;">&gt</div>
                 <img src="pixellamp.png" id= "lamppost" style="left: 2800px;" alt="Pixel lamp post."/>
-
 
                 <!-- Section 1 - Education -->
                 <div class="words_LP" style="left: 3300px;">THE UNIVERSITY OF MIAMI</div>
@@ -143,14 +149,13 @@
         </div>
 
         <div id="player">
-            <img id="playerimg" src="flippedstef.png" alt="Player is a small pixel character of the author." />
+          <img id="playerimg" src="flippedstef.png" alt="Player is a small pixel character of the author." />
         </div>
     </div>
 
     <main>
         <div id="ingame_floor">
-          <h1 id="emailaddress">steffiyaegel@yahoo.com</h1>
-          <div id="email" class="clickable"></div>
+          <a href="mailto:steffiyaegel@yahoo.com" id="email" class="clickable"></a>
           <a id="github" class="clickable" href="https://github.com/StefYaegel" target="_blank">
           <a id="linkedin" class="clickable" href="http://www.linkedin.com/in/stefanieyaegel" target="_blank">
 
@@ -161,6 +166,9 @@
 
     <script>
 
+      // if skateboard on, add player.classList.add('clickable'); otherwise player.classList.remove('clickable');
+
+            
       function openIndexPage() {
         window.location.href = 'index.html';
       }
@@ -188,6 +196,25 @@
         }
 
       }
+
+
+      function onSkateboardClick() {
+
+        var buttonimage = document.getElementById("chooseplayerimg");
+        var player = document.getElementById("playerimg");
+        var playerParent = document.getElementById("player");
+        var instructions = document.getElementById("instructions");
+        var skateboard = document.getElementById("ingame_skateboard");
+
+        if (buttonimage.src.includes("playerwalking")){
+          buttonimage.src = "playerskateboard.png";
+          player.src = "flippedstef.png"
+          playerParent.style.bottom = "11%"; 
+          instructions.style.bottom = "26%";
+          skateboard.style.display = "block";
+        }
+
+      }
       
       let cardCount = 0;
       function updateTradingCards(){
@@ -211,9 +238,9 @@
         const elementUnderCursor = document.elementFromPoint(event.x, event.y);
 
         if (elementUnderCursor && elementUnderCursor.classList.contains("clickable")) {
-          document.getElementById("cursorimg").src= "mycontrollergrey.png";
-        } else {
           document.getElementById("cursorimg").src= "mycontroller.png";
+        } else {
+          document.getElementById("cursorimg").src= "mycontrollergrey.png";
         }
 
       }
@@ -281,7 +308,7 @@
     { min: 24851, max: 25900, src: "noimage" },
     { min: 25901, max: 26600, src: "jelly.gif" },
     { min: 26601, max: 31550, src: "noimage" },
-    { min: 31551, max: 33000, src: "thanksforvisiting.gif" },
+    { min: 31551, max: 33000, src: "thanksforvisit.gif" },
     ];
 
     const instructions = document.getElementById("instructions");
@@ -332,6 +359,7 @@
         });
     }
 
+    // Run the check on scroll or animation loop
     window.addEventListener('scroll', checkCardPosition);
     });
 
@@ -354,6 +382,7 @@
     });
 
     // for purple words
+
     document.addEventListener("DOMContentLoaded", function () {
     var words = document.querySelectorAll('.words_P');
 
@@ -408,6 +437,43 @@
     window.addEventListener('scroll', checkWordPositionSDP);
     });
 
+
+    const emailImage = document.getElementById('email');
+    const emailAddress = document.getElementById('emailaddress');
+
+    emailImage.addEventListener('click', () => {
+        emailAddress.classList.toggle('visible');
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const instructionsImg = document.getElementById("instructions");
+
+      function updateImageHeight() {
+        const imageSrc = instructionsImg.getAttribute("src");
+
+        if (imageSrc && imageSrc.includes("thanksforvisit.gif")) {
+            instructionsImg.style.height = '13vw';
+        } else {
+            instructionsImg.style.height = '11vw'; 
+        }
+    }
+
+    const observer = new MutationObserver(function(mutationsList) {
+        for(const mutation of mutationsList) {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'src') {
+                updateImageHeight(); 
+            }
+        }
+    });
+
+    const config = { attributes: true };
+    observer.observe(instructionsImg, config);
+
+    updateImageHeight();
+    });
+
     document.querySelectorAll('.typing').forEach((element) => {
         element.addEventListener('animationend', (event) => {
           if (event.animationName === 'typing') {
@@ -416,12 +482,25 @@
       });
     });
 
-    const emailImage = document.getElementById('email');
-    const emailAddress = document.getElementById('emailaddress');
+    function resetTyping() {
+      document.querySelectorAll('.typing').forEach((element) => {
+        element.classList.remove('finished'); 
+        element.style.width = '0%';
 
-    emailImage.addEventListener('click', () => {
-        emailAddress.classList.toggle('visible');
+      });
+    }
+
+    const mediaQuery = window.matchMedia('(max-width: 900px)');
+
+    mediaQuery.addListener((event) => {
+      if (event.matches) {
+        resetTyping();
+      }
     });
+
+    if (mediaQuery.matches) {
+      resetTyping();
+    }
 
     </script>
   </body>
