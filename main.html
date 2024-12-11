@@ -237,9 +237,9 @@
         const elementUnderCursor = document.elementFromPoint(event.x, event.y);
 
         if (elementUnderCursor && elementUnderCursor.classList.contains("clickable")) {
-          document.getElementById("cursorimg").src= "mycontroller.png";
-        } else {
           document.getElementById("cursorimg").src= "mycontrollergrey.png";
+        } else {
+          document.getElementById("cursorimg").src= "mycontroller.png";
         }
 
       }
@@ -508,19 +508,37 @@
 }
 
 function showWarning() {
-  const warning = document.getElementById('warningmessage');
-  warning.style.display = 'flex';
-}
+      const warning = document.getElementById('warningmessage');
+      const cursor = document.getElementById('cursorimg');
+      cursor.style.display = 'none';
+      warning.style.display = 'flex';
+    }
 
-function hideWarning() {
-  const warning = document.getElementById('warningmessage');
-  warning.style.display = 'none';
-}
+    function hideWarning() {
+      const warning = document.getElementById('warningmessage');
+      const cursor = document.getElementById('cursorimg');
+      cursor.style.display = 'flex';
+      warning.style.display = 'none';
+    }
+
 
 window.addEventListener('scroll', checkVisibleArea);
 window.addEventListener('resize', checkVisibleArea);
 
 checkVisibleArea();
+
+const tradingCard = document.getElementById('tradingcard');
+const tradingCardHover = document.getElementById('tradingcardhover');
+
+function updateHoverImage() {
+    if (tradingCard.src.includes('toolscollected.png')) {
+        tradingCardHover.src = 'theend.png';  
+    } else {
+        tradingCardHover.src = 'playtocollect.png';  
+    }
+}
+
+tradingCard.addEventListener('mouseover', updateHoverImage);
 
     </script>
   </body>
