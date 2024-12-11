@@ -78,8 +78,9 @@ button{
     border-right: 4px solid black; 
     width: 0%; 
     z-index: 9;
-    margin-left: 20px;  
-    margin-top: 20px;
+    margin-left: 30px;  
+    margin-top: 30px;
+    margin-bottom: -20px;
     animation: typing 2.5s steps(22, end) forwards, blinking 0.75s step-end infinite;
 }
 
@@ -331,6 +332,7 @@ h2:nth-child(3) {
     position: fixed;
     width: 50px;
     height: 50px;
+    cursor: none;
 }
 
 #github {
@@ -544,7 +546,7 @@ video:focus {
     align-items: center;
     position: absolute;
     bottom: 0%;
-    margin-left: 30vw;
+    margin-left: 20vw;
     z-index: 10;
     transition: transform 0.5s ease;
     animation: jump 0.4s ease-out;
@@ -557,13 +559,13 @@ video:focus {
 }
 
 #mobileversion {
-    width: 65vw;
+    width: 75vw;
     transition: scale .4s;
 }
 
 #pixelstefmv {
-    width: 11vw;
-    margin-top: 28vw;
-    margin-left: -21vw;
+    width: 16vw;
+    margin-top: 33vw;
+    margin-left: -25vw;
 }
 
