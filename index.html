@@ -19,7 +19,6 @@
     </header>
 
     <div id="warningmessage">
-      <div id="blackbackground"></div>
       <div id="links">
         <a href="StefanieYaegelCV.pdf" id="typing" class="typing" style="animation-delay: 0s;" download="StefanieYaegelCV.pdf" target="_blank">Resume</a>
         <a href="http://www.linkedin.com/in/stefanieyaegel" id="typing" class="typing" style="animation-delay: 2.5s;" target="_blank">LinkedIn</a>
@@ -100,17 +99,36 @@
       });
     }
 
-    const mediaQuery = window.matchMedia('(max-width: 900px)');
+    function checkVisibleArea() {
+  const viewportWidth = window.innerWidth;  
+  const scrollLeft = window.scrollX || document.documentElement.scrollLeft; 
 
-    mediaQuery.addListener((event) => {
-      if (event.matches) {
-        resetTyping();
-      }
-    });
+  const visibleWidth = viewportWidth;
 
-    if (mediaQuery.matches) {
-      resetTyping();
-    }
+  if (visibleWidth < 900) {
+    console.log("The visible area is too small.");
+    showWarning();
+  } else {
+    console.log("Visible area is large enough.");
+    hideWarning();
+    resetTyping();
+  }
+}
+
+  function showWarning() {
+    const warning = document.getElementById('warningmessage');
+    warning.style.display = 'flex';
+  }
+
+  function hideWarning() {
+    const warning = document.getElementById('warningmessage');
+    warning.style.display = 'none';
+  }
+
+  window.addEventListener('scroll', checkVisibleArea);
+  window.addEventListener('resize', checkVisibleArea);
+
+  checkVisibleArea();
 
     </script>
 
