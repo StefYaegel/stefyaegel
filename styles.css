@@ -530,26 +530,8 @@ video:focus {
     outline: none;
 }
 
-@media (max-width: 901px) {
-    #warningmessage {
-      display: flex; 
-    }
-  }
-  
-  @media (min-width: 900px) {
-    #warningmessage {
-      display: none;
-    }
-  }
-
 #warningmessage {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-#blackbackground {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     background-color: black;
