@@ -1,5 +1,5 @@
 ## Hi there 👋
-
+Check out my [website portfolio](https://stefyaegel.github.io/stefyaegel/)! 
 <!--
 **StefYaegel/stefyaegel** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
